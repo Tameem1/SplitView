@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fdT-3K-NIM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SplitView-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SplitView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wZM-TF-yhc">
+                                <rect key="frame" x="0.0" y="64" width="375" height="268"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edB-Gb-HCZ">
+                                <rect key="frame" x="0.0" y="340" width="375" height="327"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="327" id="Siq-NG-pQP"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="0cu-z4-WZi">
+                                <rect key="frame" x="19" y="366" width="344" height="95"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0O-i3-zxh">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="95"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="abc-VM-BiY"/>
+                                            <constraint firstAttribute="height" constant="95" id="jGf-Dg-Xtg"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="Facebook-icon-1"/>
+                                        <connections>
+                                            <action selector="FButtonAction2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I0c-9p-VBm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RR9-L3-5wu">
+                                        <rect key="frame" x="122" y="0.0" width="100" height="95"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="6WD-8b-HhO"/>
+                                            <constraint firstAttribute="height" constant="95" id="tz2-Uy-gFs"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="youtube-256">
+                                            <color key="titleColor" red="1" green="0.41568627450000001" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="YTButtonAction2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l7T-Fd-4H3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Xg-uP-NfL">
+                                        <rect key="frame" x="244" y="0.0" width="100" height="95"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="e7m-iK-Wix"/>
+                                            <constraint firstAttribute="height" constant="95" id="mk5-IZ-8Fs"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="app-icon2"/>
+                                        <connections>
+                                            <action selector="IButtonAction2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NIh-UD-VI3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="XpQ-5e-nqb">
+                                <rect key="frame" x="19" y="499" width="344" height="95"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGI-ta-ln5">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="95"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="95" id="CmK-hI-URh"/>
+                                            <constraint firstAttribute="width" constant="100" id="iZ6-09-09d"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="Gmail_Icon"/>
+                                        <connections>
+                                            <action selector="MButtonAction2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tqe-GK-rS0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qW0-Lw-MNv">
+                                        <rect key="frame" x="122" y="0.0" width="100" height="95"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="95" id="5UR-Oq-EqI"/>
+                                            <constraint firstAttribute="width" constant="100" id="Vb7-AM-JCJ"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="google-1015752_960_720"/>
+                                        <connections>
+                                            <action selector="GButtonAction2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KXa-DN-sBl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvc-T4-51d">
+                                        <rect key="frame" x="244" y="0.0" width="100" height="95"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="95" id="THD-Xw-epE"/>
+                                            <constraint firstAttribute="width" constant="100" id="cZl-4U-RVH"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="twitter image"/>
+                                        <connections>
+                                            <action selector="TButtonAction2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QF6-Fo-Xgg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Lvf-BR-7EZ">
+                                <rect key="frame" x="19" y="212" width="344" height="95"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7f-vh-77w">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="95"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="5Gg-O8-zWS"/>
+                                            <constraint firstAttribute="height" constant="95" id="xeQ-Pu-cbz"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="Gmail_Icon"/>
+                                        <connections>
+                                            <action selector="MButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SIe-6h-6mV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kah-zI-yGw">
+                                        <rect key="frame" x="122" y="0.0" width="100" height="95"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="XoH-MX-8f9"/>
+                                            <constraint firstAttribute="height" constant="95" id="alT-Ih-nEx"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="google-1015752_960_720"/>
+                                        <connections>
+                                            <action selector="GButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7MN-y0-BKA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDH-OC-2W5">
+                                        <rect key="frame" x="244" y="0.0" width="100" height="95"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="NXU-o3-n1D"/>
+                                            <constraint firstAttribute="height" constant="95" id="xL3-sO-wxT"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="twitter image"/>
+                                        <connections>
+                                            <action selector="TButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="snx-mU-aPw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="2t6-K2-w03">
+                                <rect key="frame" x="19" y="79" width="344" height="95"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhU-is-V46">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="95"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="dMQ-A8-eXp"/>
+                                            <constraint firstAttribute="height" constant="95" id="wCt-NO-xCj"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="Facebook-icon-1"/>
+                                        <connections>
+                                            <action selector="FButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tUW-kS-uMy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVe-Yk-0x9">
+                                        <rect key="frame" x="122" y="0.0" width="100" height="95"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="FXi-rW-a1B"/>
+                                            <constraint firstAttribute="height" constant="95" id="LmA-WD-NXb"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="youtube-256">
+                                            <color key="titleColor" red="1" green="0.41568627450000001" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="YTButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d6U-hs-E2K"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSd-xm-TMG">
+                                        <rect key="frame" x="244" y="0.0" width="100" height="95"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="95" id="DOs-Z4-qvd"/>
+                                            <constraint firstAttribute="width" constant="100" id="L4L-o1-itg"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="app-icon2"/>
+                                        <connections>
+                                            <action selector="IButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gQp-W2-vew"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mil-KV-8C2">
+                                <rect key="frame" x="16" y="302" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="OCb-et-aDR"/>
+                                    <constraint firstAttribute="width" constant="30" id="Oik-mT-IEp"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Menu-512"/>
+                                <connections>
+                                    <action selector="ExitButton1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eh7-17-HrA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPB-0E-6tb">
+                                <rect key="frame" x="16" y="602" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="KIa-8F-NEu"/>
+                                    <constraint firstAttribute="height" constant="30" id="W9j-C4-Cu4"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Menu-512"/>
+                                <connections>
+                                    <action selector="ExitButton2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xgt-C0-gm4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3803921569" green="0.6588235294" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Lvf-BR-7EZ" firstAttribute="trailing" secondItem="2t6-K2-w03" secondAttribute="trailing" id="6Ze-T9-b4P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XpQ-5e-nqb" secondAttribute="trailing" constant="12" id="8eN-LF-6UO"/>
+                            <constraint firstItem="XpQ-5e-nqb" firstAttribute="top" secondItem="0cu-z4-WZi" secondAttribute="bottom" constant="38" id="92k-R3-TTt"/>
+                            <constraint firstItem="edB-Gb-HCZ" firstAttribute="top" secondItem="wZM-TF-yhc" secondAttribute="bottom" constant="8" symbolic="YES" id="E7T-ea-4hp"/>
+                            <constraint firstItem="TPB-0E-6tb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Fny-GW-m2d"/>
+                            <constraint firstItem="wZM-TF-yhc" firstAttribute="trailing" secondItem="edB-Gb-HCZ" secondAttribute="trailing" id="JQW-7E-Hoa"/>
+                            <constraint firstItem="edB-Gb-HCZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Jl7-Mb-yeR"/>
+                            <constraint firstItem="wZM-TF-yhc" firstAttribute="leading" secondItem="edB-Gb-HCZ" secondAttribute="leading" id="PzX-HN-Qke"/>
+                            <constraint firstItem="edB-Gb-HCZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="R3X-Mw-fec"/>
+                            <constraint firstItem="0cu-z4-WZi" firstAttribute="top" secondItem="wZM-TF-yhc" secondAttribute="bottom" constant="34" id="YSY-ce-dOO"/>
+                            <constraint firstItem="2t6-K2-w03" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="eET-gH-mRp"/>
+                            <constraint firstItem="edB-Gb-HCZ" firstAttribute="top" secondItem="mil-KV-8C2" secondAttribute="bottom" constant="8" id="euJ-7C-GJp"/>
+                            <constraint firstItem="0cu-z4-WZi" firstAttribute="leading" secondItem="2t6-K2-w03" secondAttribute="leading" id="fYc-1u-hoi"/>
+                            <constraint firstItem="wZM-TF-yhc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jKa-Bm-4kk"/>
+                            <constraint firstItem="Lvf-BR-7EZ" firstAttribute="top" secondItem="2t6-K2-w03" secondAttribute="bottom" constant="38" id="mKH-cT-MBK"/>
+                            <constraint firstItem="TPB-0E-6tb" firstAttribute="top" secondItem="XpQ-5e-nqb" secondAttribute="bottom" constant="8" id="mag-2v-3QU"/>
+                            <constraint firstItem="2t6-K2-w03" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="19" id="p9J-ZA-V0v"/>
+                            <constraint firstItem="mil-KV-8C2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ulX-Ru-Ral"/>
+                            <constraint firstItem="edB-Gb-HCZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xyp-d8-Qh7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="SplitView" id="0aQ-D0-STF"/>
+                    <connections>
+                        <outlet property="FYIStackView1" destination="2t6-K2-w03" id="KgO-Yd-66i"/>
+                        <outlet property="FYIStackView2" destination="0cu-z4-WZi" id="4Qm-ti-TR1"/>
+                        <outlet property="GTStackView1" destination="Lvf-BR-7EZ" id="55S-HM-KgY"/>
+                        <outlet property="GTStackView2" destination="XpQ-5e-nqb" id="8bQ-FL-Wr6"/>
+                        <outlet property="WebView1" destination="wZM-TF-yhc" id="tht-2T-0TT"/>
+                        <outlet property="WebView2" destination="edB-Gb-HCZ" id="6FN-3r-HfU"/>
+                        <outlet property="YTButton" destination="PVe-Yk-0x9" id="Pe6-Wg-1ib"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="978.39999999999998" y="132.68365817091455"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZX0-Ks-kmE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fdT-3K-NIM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZKq-SM-Lqc">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YKi-db-Pwd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6tc-Ki-eDg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Facebook-icon-1" width="1024" height="1024"/>
+        <image name="Gmail_Icon" width="220" height="220"/>
+        <image name="Menu-512" width="512" height="512"/>
+        <image name="app-icon2" width="398" height="398"/>
+        <image name="google-1015752_960_720" width="706" height="720"/>
+        <image name="twitter image" width="225" height="225"/>
+        <image name="youtube-256" width="256" height="256"/>
+    </resources>
+</document>

@@ -14,6 +14,10 @@ class ViewController: UIViewController {
     @IBOutlet var WebView1: WKWebView!
     @IBOutlet var WebView2: WKWebView!
     @IBOutlet var YTButton: UIButton!
+    @IBOutlet var MenuButton1: UIButton!
+    var isChecked = true
+    @IBOutlet var MenuButton2: UIButton!
+    var isChecked2 = true
     
     @IBOutlet var FYIStackView1: UIStackView!
     @IBOutlet var GTStackView1: UIStackView!
@@ -30,6 +34,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        MenuButton1.isHidden = true
+        MenuButton2.isHidden = true
         
     }
 
@@ -40,13 +46,14 @@ class ViewController: UIViewController {
     }
     //Action buttons for WebView1
     @IBAction func YTButtonAction(_ sender: Any) {
-        
+        MenuButton1.isHidden = false
         let YTRequest = URLRequest(url: YouTubeURL!)
         WebView1.load(YTRequest)
         FYIStackView1.isHidden = true
         GTStackView1.isHidden = true
     }
     @IBAction func FButtonAction(_ sender: Any) {
+        MenuButton1.isHidden = false
         let FRequest = URLRequest(url: FacebookURL!)
         WebView1.load(FRequest)
         FYIStackView1.isHidden = true
@@ -54,20 +61,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func IButtonAction(_ sender: Any) {
+        MenuButton1.isHidden = false
         let IRequest = URLRequest(url: InstagramURL!)
         WebView1.load(IRequest)
         FYIStackView1.isHidden = true
         GTStackView1.isHidden = true
     }
     
-    @IBAction func GButtonAction(_ sender: Any) {
+    @IBAction func GButtonAction(_ sender: Any){
+        MenuButton1.isHidden = false
         let GRequest = URLRequest(url: GoogleURL!)
-
         WebView1.load(GRequest)
         FYIStackView1.isHidden = true
         GTStackView1.isHidden = true
     }
     @IBAction func TButtonAction(_ sender: Any) {
+        MenuButton1.isHidden = false
         let TRequest = URLRequest(url: TwitterURL!)
         WebView1.load(TRequest)
         FYIStackView1.isHidden = true
@@ -75,31 +84,39 @@ class ViewController: UIViewController {
     }
     
     @IBAction func MButtonAction(_ sender: Any) {
+        MenuButton1.isHidden = false
         let GMRequest = URLRequest(url: GmailURL!)
         WebView1.load(GMRequest)
         FYIStackView1.isHidden = true
         GTStackView1.isHidden = true
     }
+    
+    
+    
     //Action buttons for WebView2
     @IBAction func FButtonAction2(_ sender: Any) {
+        MenuButton2.isHidden = false
         let FRequest = URLRequest(url: FacebookURL!)
         WebView2.load(FRequest)
         FYIStackView2.isHidden = true
         GTStackView2.isHidden = true
     }
     @IBAction func YTButtonAction2(_ sender: Any) {
+        MenuButton2.isHidden = false
         let YTRequest = URLRequest(url: YouTubeURL!)
         WebView2.load(YTRequest)
         FYIStackView2.isHidden = true
         GTStackView2.isHidden = true
     }
     @IBAction func IButtonAction2(_ sender: Any) {
+        MenuButton2.isHidden = false
         let IRequest = URLRequest(url: InstagramURL!)
         WebView2.load(IRequest)
         FYIStackView2.isHidden = true
         GTStackView2.isHidden = true
     }
     @IBAction func GButtonAction2(_ sender: Any) {
+        MenuButton2.isHidden = false
         let GRequest = URLRequest(url: GoogleURL!)
         WebView2.load(GRequest)
         FYIStackView2.isHidden = true
@@ -107,12 +124,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func TButtonAction2(_ sender: Any) {
+        MenuButton2.isHidden = false
         let TRequest = URLRequest(url: TwitterURL!)
         WebView2.load(TRequest)
         FYIStackView2.isHidden = true
         GTStackView2.isHidden = true
     }
     @IBAction func MButtonAction2(_ sender: Any) {
+        MenuButton2.isHidden = false
         let GMRequest = URLRequest(url: GmailURL!)
         WebView2.load(GMRequest)
         FYIStackView2.isHidden = true
@@ -120,15 +139,26 @@ class ViewController: UIViewController {
     }
     //Exit Button
     @IBAction func ExitButton1(_ sender: Any) {
-        WebView1.stopLoading()
-        FYIStackView1.isHidden = false
-        GTStackView1.isHidden = false
+        isChecked = !isChecked
+        if isChecked {
+            FYIStackView1.isHidden = true
+            GTStackView1.isHidden = true
+        } else {
+            FYIStackView1.isHidden = false
+            GTStackView1.isHidden = false
+        }
     }
     
+    
     @IBAction func ExitButton2(_ sender: Any) {
-        WebView2.stopLoading()
-        FYIStackView2.isHidden = false
-        GTStackView2.isHidden = false
+        isChecked2 = !isChecked2
+        if isChecked2 {
+            FYIStackView2.isHidden = true
+            GTStackView2.isHidden = true
+        } else {
+            FYIStackView2.isHidden = false
+            GTStackView2.isHidden = false
+        }
     }
     
     func webViewDidFinishLoad(webView: UIWebView) {

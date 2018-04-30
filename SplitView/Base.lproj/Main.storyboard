@@ -245,6 +245,8 @@
                         <outlet property="FYIStackView2" destination="0cu-z4-WZi" id="4Qm-ti-TR1"/>
                         <outlet property="GTStackView1" destination="Lvf-BR-7EZ" id="55S-HM-KgY"/>
                         <outlet property="GTStackView2" destination="XpQ-5e-nqb" id="8bQ-FL-Wr6"/>
+                        <outlet property="MenuButton1" destination="mil-KV-8C2" id="I5S-FD-Olb"/>
+                        <outlet property="MenuButton2" destination="TPB-0E-6tb" id="adR-h4-5u3"/>
                         <outlet property="WebView1" destination="wZM-TF-yhc" id="tht-2T-0TT"/>
                         <outlet property="WebView2" destination="edB-Gb-HCZ" id="6FN-3r-HfU"/>
                         <outlet property="YTButton" destination="PVe-Yk-0x9" id="Pe6-Wg-1ib"/>
